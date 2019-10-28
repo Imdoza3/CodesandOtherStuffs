@@ -59,3 +59,22 @@ if "y" in name:
     print("The letter y is in the name")
 else:
     print("The letter y is not in name")
+
+    # String Methods to investigate:
+    # Method        Use Example        Explanation
+    # center        aStr.center(w)
+    # ljust         aStr.ljust(w)
+    # rjust          aStr.rjust(w)
+    # upper         aStr.upper()
+    # lower         aStr.lower()
+    # index         aStr.index(item)
+    # rindex        aStr.rindex(item)
+    # find          aStr.find(item)
+    # rfind         aStr.rfind(item)
+    # replace       aStr.replace(old, new)
+
+print(ord('B'))
+
+print(chr(97 + 13))
+
+print(str(12548))
