@@ -30,3 +30,50 @@ def scramble2Decrypt(cipherText):
         plainText = plainText + evenChars[-1]
 
     return plainText
+
+# write a stripSpaces(text) function here
+
+print(scramble2Encrypt("What a good morning"))
+sentence = "htago onnWa  odmrig"
+print(sentence.replace(" ",""))
+
+# write a caeserEncrypt(plainText, shift)
+
+key = 'abcdefghijklmnopqrstuvwxyz'
+
+def encrypt(n, plaintext):
+    """Encrypt the string and return the ciphertext"""
+    result = ''
+
+    for l in plaintext.lower():
+        try:
+            i = (key.index(l) + n) % 26
+            result += key[i]
+        except ValueError:
+            result += l
+
+    return result.lower()
+
+# write a caeserDecrypt(cipherText, shift)
+
+def decrypt(n, ciphertext):
+    """Decrypt the string and return the plaintext"""
+    result = ''
+
+    for l in ciphertext:
+        try:
+            i = (key.index(l) - n) % 26
+            result += key[i]
+        except ValueError:
+            result += l
+
+    return result
+
+text = "Good morning people wake up"
+offset = 5
+
+encrypted = encrypt(offset, text)
+print('Encrypted:', encrypted)
+
+decrypted = decrypt(offset, encrypted)
+print('Decrypted:', decrypted)
